@@ -25,6 +25,7 @@ public class CardStatusController {
     @GetMapping("/get_card_status")
     public ResponseEntity<?> getCardStatus(@RequestBody CardStatusQueryDto cardStatusQueryDto) {
         String response = cardStatusService.getCardStatus(cardStatusQueryDto);
+        System.out.println("Helloworld");
         return ResponseEntity.ok(response);
     }
 
